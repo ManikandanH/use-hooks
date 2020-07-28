@@ -7,7 +7,7 @@ const useComponentDidMount = (callback: Callback): void => {
     useEffect(ref.current, []);
 };
 
-const useComponentDidUnmount = (callback: Callback): void => {
+const useComponentUnmount = (callback: Callback): void => {
     const ref = useRef(callback);
     useEffect(() => ref.current, []);
 };
@@ -24,4 +24,4 @@ const usePreviousProp = (value: any): any => {
     // return previous value (happens before update in useEffect above)
     return ref.current;
 }
-export { useComponentDidMount, useComponentDidUnmount, usePreviousProp };
+export { useComponentDidMount, useComponentUnmount, usePreviousProp };
