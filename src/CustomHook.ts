@@ -2,19 +2,14 @@ import { useEffect, useRef, useCallback } from 'react'
 
 type Callback = () => any
 
-const useCustomCallback = (args: any) =>
-    useCallback(() => {
-        args.current
-    }, [args])
-
 const useComponentDidMount = (callback: Callback): void => {
     const ref = useRef(callback);
-    useEffect(useCustomCallback(ref), []);
+    useEffect(ref.current, []);
 };
 
 const useComponentDidUnmount = (callback: Callback): void => {
     const ref = useRef(callback);
-    useEffect(() => useCustomCallback(ref), []);
+    useEffect(() => ref.current, []);
 };
 
 const usePreviousProp = (value: any): any => {
