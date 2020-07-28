@@ -41,6 +41,7 @@ Simple hook to unsubscribe the events that you have attached to your page as a s
 ```
 useComponentUnmount(() => { 
   window.removeEventListener('ANY_EVENTS',() => {}} 
+  //any kind of unsubscription
 })
 ```
 
