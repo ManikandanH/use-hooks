@@ -18,6 +18,7 @@ const usePreviousProp = (value: any): any => {
     useEffect(() => {
         ref.current = value;
         // stores the current value in ref
+        return () => ref.current = undefined
     }, [value]); // only re-run if the parameter value changes
 
     // return previous value (happens before update in useEffect above)
