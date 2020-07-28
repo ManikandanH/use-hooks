@@ -1,6 +1,6 @@
 {
   "name": "use-the-hook",
-  "version": "1.1.1",
+  "version": "1.0.1",
   "description": "set of hooks that can make ur functional component look like as a class component",
   "main": "dist/CustomHook.js",
   "types": "dist/CustomHook.d.ts",
